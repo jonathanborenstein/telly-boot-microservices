@@ -5,7 +5,7 @@ This project is a continuation of https://github.com/jonathanborenstein/telly-bo
 
 In order to use the program you need to download the rabbitmq message broker. https://www.rabbitmq.com/download.html
 
-You can run then program by importing a maven project into your IDE or by going to each directory (bus, reservations, and telly) and use <code>mvn clean spring-boot:run</code> .
+You can run then program by importing a maven project into your IDE or by going to each directory (telly-boot-microservices/bus, telly-boot-microservices/reservations, and telly-boot-microservices/telly) and use <code>mvn clean spring-boot:run</code> .
 
 First you will need to download or clone the program. <code>git clone https://github.com/jonathanborenstein/telly-boot-microservices.git</code>
 
