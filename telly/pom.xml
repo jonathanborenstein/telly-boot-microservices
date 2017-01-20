@@ -11,10 +11,13 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<tiles.version>3.0.5</tiles.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<groupId>com.telly</groupId>
-	<artifactId>telly-boot</artifactId>
+	<artifactId>telly</artifactId>
 	<version>1.0</version>
 
 	<dependencies>
@@ -77,16 +80,13 @@
 		</dependency>
 	</dependencies>
 
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
-	<build>
+		<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>true</executable>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
