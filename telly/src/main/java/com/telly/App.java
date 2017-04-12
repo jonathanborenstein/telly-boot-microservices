@@ -1,12 +1,10 @@
 package com.telly;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.embedded.ErrorPage;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpStatus;
@@ -17,11 +15,9 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
 
-
 @SpringBootApplication
 @Import(RabbitConfiguration.class)
-@EnableAutoConfiguration
-public class App extends SpringBootServletInitializer {
+public class App {
 
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
@@ -55,7 +51,9 @@ public class App extends SpringBootServletInitializer {
 
 			@Override
 			public void customize(ConfigurableEmbeddedServletContainer container) {
-				container.addErrorPages(new ErrorPage(HttpStatus.FORBIDDEN, "/403"));			}
+				container.addErrorPages(new ErrorPage(HttpStatus.FORBIDDEN, "/403"));			
+				
+			}
 			
 		};
 	}

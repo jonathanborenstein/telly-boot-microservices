@@ -5,8 +5,6 @@ import java.util.Date;
 
 import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 
 public class Bus implements Serializable {
 
@@ -14,7 +12,6 @@ public class Bus implements Serializable {
 
 	private Long id;
 
-	@DateTimeFormat(pattern="yyyy/MM/dd")
 	private Date date;
 
 	@Size(min=3, max=15, message="Leave From field must be at least size 3")
