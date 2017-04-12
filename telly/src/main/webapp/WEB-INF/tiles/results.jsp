@@ -12,32 +12,28 @@
 
 
 	<div class="error">
-		<sf:errors path="date"></sf:errors>
+		<p><sf:errors path="date"></sf:errors></p>
+		<p><sf:errors path="leaveFrom"></sf:errors></p>
+		<p><sf:errors path="goingTo"></sf:errors></p>
 	</div>
-	
+
 	<table class="form-horizontal" role="form">
 		<tr>
 
 
 			<td class="control-label col-sm-2">Leave Date:</td>
 			<td><sf:input class="col-sm-10" path="date" name="date"
-					type="text" /><br/>
+					type="text" /><br />
 		<tr>
 		<tr>
 			<td class="control-label col-sm-2">Leave From:</td>
 			<td><sf:input class="col-sm-10" path="leaveFrom"
 					name="leaveFrom" type="text" /><br />
-				<div class="error">
-					<sf:errors path="leaveFrom"></sf:errors>
-				</div></td>
 		<tr>
 		<tr>
-			<td class="control-label col-sm-2">Going to:</td>
+			<td class="control-label col-sm-2">Going To:</td>
 			<td><sf:input class="col-sm-10" path="goingTo" name="goingTo"
 					type="text" /><br />
-				<div class="error">
-					<sf:errors path="goingTo"></sf:errors>
-				</div></td>
 		<tr>
 			<td>
 			<td><input class="btn-primary pull-right" value="Search"

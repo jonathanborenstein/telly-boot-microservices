@@ -3,49 +3,29 @@ package com.telly.model;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-@Entity
-@Table(name="telly_bus")
+
 public class Bus implements Serializable {
-	
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	@NotNull
-	@Column(name="date")
-	@Temporal(TemporalType.DATE)
+
 	@DateTimeFormat(pattern="yyyy/MM/dd")
 	private Date date;
-	
-	
-	@Column(name="leavingfrom")
+
+	@Size(min=3, max=15, message="Leave From field must be at least size 3")
 	private String leaveFrom;
-	
-	@Column(name="goingto")
+
+	@Size(min=3, max=15, message="Going To field must be at least size 3")
 	private String goingTo;
-	
-	
+
+
 	public Bus() {
-		
+
 	}
 
 
@@ -53,7 +33,7 @@ public class Bus implements Serializable {
 		this.date = date;
 		this.leaveFrom = leaveFrom;
 		this.goingTo = goingTo;
-	
+
 	}
 
 
@@ -101,7 +81,7 @@ public class Bus implements Serializable {
 	public String toString() {
 		return "Bus [id=" + id + ", date=" + date + ", leaveFrom=" + leaveFrom + ", goingTo=" + goingTo + "]";
 	}
-	
-	
-	
+
+
+
 }

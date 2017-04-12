@@ -2,32 +2,15 @@ package com.telly.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="telly_reservations")
 public class Reservations implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name = "bus_id")
 	private Long busId;
 	
-	
-	@Column(name = "email")
 	private String email;
 	
 
@@ -55,14 +38,5 @@ public class Reservations implements Serializable {
 		this.email = email;
 	}
 	
-	
-
-
-	
-	
-	
-	
-
-
 
 }
